@@ -31,13 +31,14 @@ class UserDbHelper(context : Context) : SQLiteOpenHelper(context, DATABASE_NAME,
 
     fun insertData(user : User){
         val db = writableDatabase
-        val sql = " INSERT INTO ${UserContract.UserEntry.TABLE_NAME} "+
-                " (${UserContract.UserEntry.COLUMN_ID}, " +
-                "${UserContract.UserEntry.COLUMN_EMAIL}, "+
-                "${UserContract.UserEntry.COLUMN_FIRSTNAME} ) " +
-                "${UserContract.UserEntry.COLUMN_LASTNAME} ) " +
-                "${UserContract.UserEntry.COLUMN_PASSWORD} ) " +
-                " VALUES ( null, '${user.email}','${user.firstName}', '${user.lastName}', '${user.password}') "
+        val sql = "INSERT INTO ${UserContract.UserEntry.TABLE_NAME} " +
+                "(${UserContract.UserEntry.COLUMN_ID}, " +
+                "${UserContract.UserEntry.COLUMN_EMAIL}, " +
+                "${UserContract.UserEntry.COLUMN_FIRSTNAME}, " +
+                "${UserContract.UserEntry.COLUMN_LASTNAME}, " +
+                "${UserContract.UserEntry.COLUMN_PASSWORD}) " +
+                "VALUES (null, '${user.email}', '${user.firstName}', '${user.lastName}', '${user.password}')"
+
         db.execSQL(sql)
         db.close()
     }
@@ -59,6 +60,7 @@ class UserDbHelper(context : Context) : SQLiteOpenHelper(context, DATABASE_NAME,
 
             user = User(id,email,firstName, lastName, password)
         }
+
         cursor.close()
         db.close()
         return user

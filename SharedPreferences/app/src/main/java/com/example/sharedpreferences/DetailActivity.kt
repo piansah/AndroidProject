@@ -16,21 +16,5 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         sharedPrefs = getSharedPreferences("DataUser", Context.MODE_PRIVATE)
-
-        val email = sharedPrefs.getString("user_email","")
-        val password = sharedPrefs.getString("user_password","")
-
-        binding.txtEmail.text = "Email : ${email.toString()}"
-        binding.txtPassword.text = "Password : ${password.toString()}"
-
-        binding.btnLogout.setOnClickListener{
-            with(sharedPrefs.edit()){
-                clear()
-                apply()
-            }
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 }

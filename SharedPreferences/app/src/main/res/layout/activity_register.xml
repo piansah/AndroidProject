@@ -31,7 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp">
+            android:layout_marginEnd="60dp"
+            app:boxStrokeColor="#ffcd19"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputFirstName"
@@ -53,7 +55,8 @@
             android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            app:boxStrokeColor="#ffcd19"
+            app:hintTextColor="@color/black">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputLastName"
                 android:layout_width="match_parent"
@@ -73,7 +76,9 @@
             android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            app:boxStrokeColor="#ffcd19"
+            app:hintTextColor="@color/black">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
@@ -94,7 +99,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-            >
+            app:boxStrokeColor="#ffcd19"
+            app:hintTextColor="@color/black">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
