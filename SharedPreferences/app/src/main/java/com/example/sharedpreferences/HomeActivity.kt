@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         val userId = sharedPrefs.getInt("user_id", -1)
         val userName = sharedPrefs.getString("user_name", "")
 
-        binding.textHello.text = "Hello$userName"
+        binding.textHello.text = "Hello${userName.toString()}"
 
         // Handle your other views and logic here
     }
