@@ -20,7 +20,7 @@ class SplashScreen : AppCompatActivity() {
         sharedPrefs = getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
         if (sharedPrefs.contains("user_id")){
-            val intent = Intent(this,DetailActivity::class.java)
+            val intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
             finish()
         }else{
@@ -28,7 +28,7 @@ class SplashScreen : AppCompatActivity() {
                 val intent = Intent(this,MainActivity::class.java)
                 startActivity(intent)
                 finish()
-            }, 2000)
+            }, 1000)
         }
     }
 }

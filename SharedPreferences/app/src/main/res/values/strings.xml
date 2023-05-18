@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">SharedPreferences</string>
+    <string name="hello">Hello</string>
+    <string name="pian">Pian</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="search_elements">Search Elements</string>
+    <string name="search">Search</string>
+    <string name="konsultasi">Konsultasi</string>
+    <string name="informasi_penyakit">Informasi Penyakit</string>
+    <string name="petunjuk_pengguna">Petunjuk Pengguna</string>
+    <string name="diagnosa_penyakit">Diagnosa Penyakit</string>
+    <string name="trending">Trending</string>
+    <string name="dumppy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus libero leo, ultrices at mattis nec, fringilla vestibulum quam. Nam eu augue augue. Duis et mi ac felis vulputate pellentesque sit amet ut lacus.</string>
+    <string name="nav_home">home</string>
+    <string name="nav_favorit">favorit</string>
+    <string name="nav_account">account</string>
+    <string name="nav_settings">settings</string>
 </resources>

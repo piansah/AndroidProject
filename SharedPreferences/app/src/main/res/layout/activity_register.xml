@@ -12,28 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="130dp"
             android:text="Register"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="36sp"
             android:textStyle="bold" />
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextFirstName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="200dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            app:boxStrokeColor="#ffcd19"
-            app:hintTextColor="@color/black">
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputFirstName"
@@ -41,8 +39,7 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:hint="Nama Depan"
-                android:inputType="text"
-                >
+                android:inputType="text">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,20 +52,68 @@
             android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#ffcd19"
-            app:hintTextColor="@color/black">
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputLastName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Nama Belakang"
-                android:inputType="text"
-                >
+                android:inputType="text">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/editTextLastName"
+            android:id="@+id/editTextDateOfBirth"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tanggal Lahir"
+                android:inputType="none"
+                android:focusable="false"
+                android:onClick="showDatePickerDialog">
+               <!-- android:drawableStart="@drawable/baseline_calendar_24"
+                android:drawablePadding="5dp"-->
+
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_below="@id/editTextLastName"
+            android:layout_below="@id/editTextDateOfBirth"
+            android:id="@+id/editTextPhoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Nomor Telepon"
+                android:inputType="phone">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/editTextPhoneNumber"
             android:id="@+id/editTextEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="10dp"
@@ -76,56 +121,53 @@
             android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="#ffcd19"
-            app:hintTextColor="@color/black">
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Email"
-                android:inputType="textEmailAddress"
-                >
+                android:inputType="textEmailAddress">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_below="@id/editTextEmail"
             android:id="@+id/editPassword"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextEmail"
             android:layout_marginTop="10dp"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-            app:boxStrokeColor="#ffcd19"
-            app:hintTextColor="@color/black">
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Password"
-                android:inputType="textPassword"
-                >
+                android:inputType="textPassword">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegister"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#ffcd19"
+            android:backgroundTint="#FFCD19"
             android:padding="12dp"
             android:layout_below="@id/editPassword"
             android:layout_centerHorizontal="true"
-            android:text="REGISTER"
+            android:text="Sign Up"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            />
+            android:layout_marginEnd="10dp" />
     </RelativeLayout>
-
 </ScrollView>
