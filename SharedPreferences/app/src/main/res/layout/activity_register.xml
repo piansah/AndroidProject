@@ -13,6 +13,7 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -24,12 +25,13 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextFirstName"
+            android:layout_below="@id/textRegister"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginEnd="200dp"
             app:boxStrokeColor="#FFCD19"
             app:hintTextColor="#000000">
 
@@ -38,17 +40,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:hint="Nama Depan"
+                android:hint="First Name"
                 android:inputType="text">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_below="@id/editTextFirstName"
+            android:layout_below="@id/textRegister"
             android:id="@+id/editTextLastName"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="200dp"
             android:layout_marginEnd="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,14 +60,14 @@
                 android:id="@+id/inputLastName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Nama Belakang"
+                android:hint="Last Name"
                 android:inputType="text">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_below="@id/editTextLastName"
+            android:layout_below="@id/editTextUsername"
             android:id="@+id/editTextDateOfBirth"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="10dp"
@@ -80,13 +82,57 @@
                 android:id="@+id/inputDateOfBirth"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Tanggal Lahir"
+                android:hint="Date Of Birth"
                 android:inputType="none"
                 android:focusable="false"
                 android:onClick="showDatePickerDialog">
                <!-- android:drawableStart="@drawable/baseline_calendar_24"
                 android:drawablePadding="5dp"-->
 
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextUsername"
+            android:layout_below="@id/editTextLastName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Username"
+                android:inputType="text">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextAddress"
+            android:layout_below="@id/editTextPhoneNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            app:boxStrokeColor="#FFCD19"
+            app:hintTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="Address"
+                android:inputType="text">
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,14 +152,14 @@
                 android:id="@+id/inputPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:hint="Nomor Telepon"
+                android:hint="Telephone"
                 android:inputType="phone">
 
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_below="@id/editTextPhoneNumber"
+            android:layout_below="@id/editTextAddress"
             android:id="@+id/editTextEmail"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginTop="10dp"

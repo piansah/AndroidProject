@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E3E3"
+    android:background="@color/Background"
     tools:context=".HomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:text="@string/hello"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +35,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
             android:text="@string/pian"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textHello"
@@ -77,7 +77,7 @@
                 android:inputType="text"
                 android:paddingStart="20dp"
                 android:paddingEnd="15dp"
-                android:textColor="#333333"
+                android:textColor="@color/Accent"
                 android:textSize="16sp" />
 
             <ImageView
@@ -246,7 +246,7 @@
                     android:paddingEnd="8dp"
                     android:paddingBottom="2dp"
                     android:text="@string/trending"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/White"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -270,7 +270,7 @@
                     android:ellipsize="end"
                     android:maxLines="3"
                     android:text="@string/dumppy_text"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/White"
                     android:textSize="15sp"
                     app:layout_constraintTop_toBottomOf="@id/textTrending"
                     />
@@ -285,8 +285,9 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="@color/White"
         app:itemIconSize="30dp"
+        app:itemIconTint="@color/menu_bottom_navigation"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/navigation_menu"
@@ -295,7 +296,8 @@
         android:id="@+id/viewDivinder"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:backgroundTint="#D6D6D6"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        android:background="@color/Divider"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

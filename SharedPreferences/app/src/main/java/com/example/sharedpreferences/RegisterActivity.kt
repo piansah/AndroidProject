@@ -34,12 +34,14 @@ class RegisterActivity : AppCompatActivity() {
             val firstName = binding.inputFirstName.text.toString()
             val lastName = binding.inputLastName.text.toString()
             val userEmail = binding.inputEmail.text.toString()
+            val adderess = binding.inputAddress.text.toString()
+            val userName = binding.inputUsername.text.toString()
             val userDateOfBirth = binding.inputDateOfBirth.text.toString()
             val userPhoneNumber = binding.inputPhoneNumber.text.toString()
             val userPassword = binding.inputPassword.text.toString()
 
             if (firstName.isNotEmpty() && lastName.isNotEmpty() && userDateOfBirth.isNotEmpty() && userEmail.isNotEmpty() && userPassword.isNotEmpty()) {
-                val user = User(firstName = firstName, lastName = lastName, dateOfBirth = userDateOfBirth, phoneNumber = userPhoneNumber, email = userEmail, password = userPassword)
+                val user = User(firstName = firstName, lastName = lastName, userName = userName,address = adderess,dateOfBirth = userDateOfBirth, phoneNumber = userPhoneNumber, email = userEmail, password = userPassword)
                 dbHelper.insertData(user)
                 Toast.makeText(this, "Register Berhasil!!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)

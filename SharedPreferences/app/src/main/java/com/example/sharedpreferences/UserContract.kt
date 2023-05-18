@@ -11,6 +11,8 @@ object UserContract {
         const val COLUMN_LASTNAME = "lastName"
         const val COLUMN_DATEOFBIRTH = "dateOfBirth"
         const val COLUMN_PASSWORD = "password"
+        const val COLUMN_ADDRESS = "address"
+        const val COLUMN_USERNAME = "userName"
         const val COLUMN_PHONENUMBER = "phone"
 
     }

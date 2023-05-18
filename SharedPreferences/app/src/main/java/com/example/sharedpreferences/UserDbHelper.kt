@@ -7,15 +7,17 @@ import android.database.sqlite.SQLiteOpenHelper
 class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private const val DATABASE_NAME = "db_user"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_VERSION = 3
 
         private const val SQL_CREATE_ENTRIES =
             "CREATE TABLE ${UserContract.UserEntry.TABLE_NAME} " +
                     "(" +
                     "${UserContract.UserEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "${UserContract.UserEntry.COLUMN_EMAIL} VARCHAR(255), " +
+                    "${UserContract.UserEntry.COLUMN_USERNAME} VARCHAR(255), " +
                     "${UserContract.UserEntry.COLUMN_FIRSTNAME} VARCHAR(255), " +
                     "${UserContract.UserEntry.COLUMN_LASTNAME} VARCHAR(255), " +
+                    "${UserContract.UserEntry.COLUMN_ADDRESS} VARCHAR(255), " +
                     "${UserContract.UserEntry.COLUMN_DATEOFBIRTH} VARCHAR(255), " +
                     "${UserContract.UserEntry.COLUMN_PHONENUMBER} VARCHAR(255), " +
                     "${UserContract.UserEntry.COLUMN_PASSWORD} VARCHAR(255))"
@@ -36,12 +38,14 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         val db = writableDatabase
         val sql = "INSERT INTO ${UserContract.UserEntry.TABLE_NAME} " +
                 "(${UserContract.UserEntry.COLUMN_EMAIL}, " +
+                "${UserContract.UserEntry.COLUMN_USERNAME}, " +
                 "${UserContract.UserEntry.COLUMN_FIRSTNAME}, " +
                 "${UserContract.UserEntry.COLUMN_LASTNAME}, " +
                 "${UserContract.UserEntry.COLUMN_DATEOFBIRTH}, " +
                 "${UserContract.UserEntry.COLUMN_PHONENUMBER}, " +
-                "${UserContract.UserEntry.COLUMN_PASSWORD}) " +
-                "VALUES ('${user.email}', '${user.firstName}', '${user.lastName}', '${user.dateOfBirth}', '${user.phoneNumber}', '${user.password}')"
+                "${UserContract.UserEntry.COLUMN_PASSWORD}, " +
+                "${UserContract.UserEntry.COLUMN_ADDRESS}) " +
+                "VALUES ('${user.email}', '${user.userName}', '${user.firstName}', '${user.lastName}', '${user.dateOfBirth}', '${user.phoneNumber}', '${user.password}', '${user.address}')"
 
         db.execSQL(sql)
         db.close()
@@ -60,13 +64,15 @@ class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         if (cursor.moveToFirst()) {
             val id = cursor.getInt(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_ID))
             val retrievedEmail = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_EMAIL))
+            val retrievedUsername = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_USERNAME))
             val firstName = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_FIRSTNAME))
             val lastName = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_LASTNAME))
+            val address = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_ADDRESS))
             val dateOfBirth = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_DATEOFBIRTH))
             val phoneNumber = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_PHONENUMBER))
             val retrievedPassword = cursor.getString(cursor.getColumnIndexOrThrow(UserContract.UserEntry.COLUMN_PASSWORD))
 
-            user = User(id, retrievedEmail, firstName, lastName, dateOfBirth, phoneNumber, retrievedPassword)
+            user = User(id, retrievedEmail, retrievedUsername, firstName, lastName, address, dateOfBirth, phoneNumber, retrievedPassword)
         }
 
         cursor.close()

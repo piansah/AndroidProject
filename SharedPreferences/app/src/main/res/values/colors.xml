@@ -6,8 +6,10 @@
     <color name="PrimaryDark">#FFCD19</color>
     <color name="PrimaryLight">#E9F8F1</color>
     <color name="Accent">#333333</color>
-    <color name="Background">#EBEBEB</color>
+    <color name="Background">#f5f5f5</color>
     <color name="TrendingStart">#ffb300</color>
     <color name="TrendingEnd">#ff8000</color>
     <color name="Divider">#E6E3E3</color>
+    <color name="Transparant">#00000000</color>
 </resources>
+

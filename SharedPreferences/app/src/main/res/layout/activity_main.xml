@@ -19,7 +19,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="230dp"
             android:text="@string/login"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:textSize="34sp"
             android:textStyle="bold" />
 
@@ -31,8 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
-            app:boxStrokeColor="#FFCD19"
-            app:hintTextColor="#000000">
+            app:boxStrokeColor="@color/Primary"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputEmail"
@@ -56,8 +56,8 @@
             android:layout_marginStart="60dp"
             android:layout_marginEnd="60dp"
             app:passwordToggleEnabled="true"
-            app:boxStrokeColor="#FFCD19"
-            app:hintTextColor="#000000">
+            app:boxStrokeColor="@color/Primary"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPassword"
@@ -77,7 +77,7 @@
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
-            android:backgroundTint="#FFCD19"
+            android:backgroundTint="@color/Primary"
             android:layout_centerHorizontal="true"
             android:text="@string/sign_in"
             android:layout_marginStart="10dp"
@@ -89,8 +89,8 @@
             android:layout_below="@id/btnLogin"
             android:layout_width="250dp"
             android:layout_height="50dp"
-            android:backgroundTint="#00000000"
-            android:textColor="#000000"
+            android:backgroundTint="@color/Transparant"
+            android:textColor="@color/black"
             android:layout_centerHorizontal="true"
             android:text="@string/sign_up"
             android:layout_marginStart="10dp"
