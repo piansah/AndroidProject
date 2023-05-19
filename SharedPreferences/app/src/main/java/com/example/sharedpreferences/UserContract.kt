@@ -14,6 +14,5 @@ object UserContract {
         const val COLUMN_ADDRESS = "address"
         const val COLUMN_USERNAME = "userName"
         const val COLUMN_PHONENUMBER = "phone"
-
     }
 }

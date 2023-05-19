@@ -7,20 +7,19 @@ import android.database.sqlite.SQLiteOpenHelper
 class UserDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {
         private const val DATABASE_NAME = "db_user"
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 1
 
         private const val SQL_CREATE_ENTRIES =
-            "CREATE TABLE ${UserContract.UserEntry.TABLE_NAME} " +
-                    "(" +
-                    "${UserContract.UserEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "${UserContract.UserEntry.COLUMN_EMAIL} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_USERNAME} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_FIRSTNAME} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_LASTNAME} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_ADDRESS} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_DATEOFBIRTH} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_PHONENUMBER} VARCHAR(255), " +
-                    "${UserContract.UserEntry.COLUMN_PASSWORD} VARCHAR(255))"
+            "CREATE TABLE ${UserContract.UserEntry.TABLE_NAME} (" +
+                    "${UserContract.UserEntry.COLUMN_ID} INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "${UserContract.UserEntry.COLUMN_EMAIL} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_USERNAME} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_FIRSTNAME} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_LASTNAME} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_ADDRESS} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_DATEOFBIRTH} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_PHONENUMBER} TEXT, " +
+                    "${UserContract.UserEntry.COLUMN_PASSWORD} TEXT)"
 
         private const val SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS ${UserContract.UserEntry.TABLE_NAME}"
     }

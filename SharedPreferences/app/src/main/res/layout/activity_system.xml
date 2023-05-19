@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SystemActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="240dp"
+            android:layout_height="160dp"
+            android:src="@drawable/eyes_healty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@id/imageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistem Pakar Penyakit Mata"
+            android:textAlignment="center"
+            />
+
+        <CheckBox
+            android:id="@+id/penglihatanTerasaKabur"
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Penglihatan Terasa Kabur" />
+        <CheckBox
+            android:id="@+id/mataBerair"
+            android:layout_below="@id/penglihatanTerasaKabur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Berair" />
+        <CheckBox
+            android:id="@+id/mataBengkak"
+            android:layout_below="@id/mataBerair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Bengkak" />
+        <CheckBox
+            android:id="@+id/mataTerasaPerih"
+            android:layout_below="@id/mataBengkak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Perih" />
+        <CheckBox
+            android:id="@+id/mataTerasaAdaYangMengganjal"
+            android:layout_below="@id/mataTerasaPerih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Ada Yang Mengganjal" />
+        <CheckBox
+            android:id="@+id/penglihatanSilau"
+            android:layout_below="@id/mataTerasaAdaYangMengganjal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Penglihatan Silau" />
+        <CheckBox
+            android:id="@+id/terlihatLingkaranCahaya"
+            android:layout_below="@id/penglihatanSilau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Terlihat Lingkaran Cahaya" />
+        <CheckBox
+            android:id="@+id/penglihatanObjekGanda"
+            android:layout_below="@id/terlihatLingkaranCahaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Penglihatan Objek Ganda" />
+        <CheckBox
+            android:id="@+id/mataBerwarnaMerah"
+            android:layout_below="@id/penglihatanObjekGanda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Berwarna Merah" />
+        <CheckBox
+            android:id="@+id/mataTerasaGatal"
+            android:layout_below="@id/mataBerwarnaMerah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Gatal" />
+        <CheckBox
+            android:id="@+id/mataTerasaPanas"
+            android:layout_below="@id/mataTerasaGatal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Panas" />
+        <CheckBox
+            android:id="@+id/sakitKepala"
+            android:layout_below="@id/mataTerasaPanas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Sakit Kepala" />
+        <CheckBox
+            android:id="@+id/mataTerasaSakit"
+            android:layout_below="@id/sakitKepala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Sakit" />
+        <CheckBox
+            android:id="@+id/mataMeradang"
+            android:layout_below="@id/mataTerasaSakit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Meradang" />
+        <CheckBox
+            android:id="@+id/mataNyeriHebat"
+            android:layout_below="@id/mataMeradang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Nyeri Hebat" />
+        <CheckBox
+            android:id="@+id/mataTerasaNyeri"
+            android:layout_below="@id/mataNyeriHebat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Terasa Nyeri" />
+        <CheckBox
+            android:id="@+id/kelainanPadaPupilMata"
+            android:layout_below="@id/mataTerasaNyeri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Kelainan Pada Pupil Mata" />
+        <CheckBox
+            android:id="@+id/mataLelah"
+            android:layout_below="@id/kelainanPadaPupilMata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Lelah" />
+        <CheckBox
+            android:id="@+id/seringMengedipkanMata"
+            android:layout_below="@id/mataLelah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Sering Mengedipkan Mata" />
+        <CheckBox
+            android:id="@+id/pekaTerhadapCahaya"
+            android:layout_below="@id/seringMengedipkanMata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Peka Terhadap Cahaya" />
+        <CheckBox
+            android:id="@+id/penglihatanDekatTerasaKabur"
+            android:layout_below="@id/pekaTerhadapCahaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Penglihatan Dekat TerasaKabur" />
+        <CheckBox
+            android:id="@+id/tekananBolaMataMeningkat"
+            android:layout_below="@id/penglihatanDekatTerasaKabur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Tekanan Bola Mata Meningkat" />
+        <CheckBox
+            android:id="@+id/penglihatanObjekJauhKurangTerlihatJelas"
+            android:layout_below="@id/tekananBolaMataMeningkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Penglihatan Objek Jauh Kurang Terlihat Jelas" />
+        <CheckBox
+            android:id="@+id/lemakMenutupiKornea"
+            android:layout_below="@id/penglihatanObjekJauhKurangTerlihatJelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Lemak Menutupi Kornea" />
+        <CheckBox
+            android:id="@+id/menyipitkanMataUntukMelihatBendaYangDekat"
+            android:layout_below="@id/lemakMenutupiKornea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Menyipitkan Mata Untuk Melihat Benda Yang Dekat" />
+        <CheckBox
+            android:id="@+id/sumberCahayaAkanBerwarnaPelangiJikaMelihatCahayaYangTerang"
+            android:layout_below="@id/menyipitkanMataUntukMelihatBendaYangDekat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Sumber Cahaya Akan Berwarna Pelangi Jika Melihat Cahaya Yang Terang" />
+        <CheckBox
+            android:id="@+id/mataTegang"
+            android:layout_below="@id/sumberCahayaAkanBerwarnaPelangiJikaMelihatCahayaYangTerang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Mata Tegang" />
+        <CheckBox
+            android:id="@+id/terlihatBayanganGarisHitam"
+            android:layout_below="@id/mataTegang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChecked"
+            android:text="Terlihat Bayangan Garis Hitam" />
+
+        <Button
+            android:id="@+id/btnDiagnosa"
+            android:layout_below="@id/terlihatBayanganGarisHitam"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="Cek Diagnosa" />
+
+        <TextView
+            android:id="@+id/resultDiagnosa"
+            android:layout_below="@id/btnDiagnosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            />
+    </RelativeLayout>
+
+</ScrollView >

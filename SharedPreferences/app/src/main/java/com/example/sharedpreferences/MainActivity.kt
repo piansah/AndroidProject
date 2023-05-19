@@ -29,14 +29,15 @@ class MainActivity : AppCompatActivity() {
                 val user = dbHelper.getUser(email, password)
 
                 if (user != null) {
-                    val intent = Intent(this, HomeActivity::class.java)
-
                     with(sharedPrefs.edit()) {
                         putInt("user_id", user.id)
                         putString("user_email", user.email)
                         putString("user_password", user.password)
+                        putString("user_name", user.userName) // Menyimpan nama pengguna
                         apply()
                     }
+
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {

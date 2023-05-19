@@ -10,5 +10,4 @@ data class User(
     val address: String,
     val dateOfBirth: String,
     val phoneNumber: String
-    // Tambahkan properti untuk tanggal lahir
 )

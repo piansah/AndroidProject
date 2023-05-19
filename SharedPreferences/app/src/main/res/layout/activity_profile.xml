@@ -237,7 +237,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textMyName"
+                                android:id="@+id/textName"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="15dp"
@@ -339,7 +339,7 @@
 
                             <TextView
 
-                                android:id="@+id/textPhoneNumber"
+                                android:id="@+id/PhoneNumber"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="15dp"
@@ -349,7 +349,7 @@
                                 android:textSize="18sp" />
 
                             <TextView
-                                android:id="@+id/textMyPhoneNumber"
+                                android:id="@+id/textPhoneNumber"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="15dp"
@@ -401,22 +401,42 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-                android:id="@+id/button"
+<!--            <Button-->
+<!--                android:id="@+id/button"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="1dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:backgroundTint="#ff8103"-->
+<!--                android:text="Edit Profile"-->
+<!--                android:textColor="@color/White"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:backgroundTint="#ff8103"
-                android:text="Edit Profile"
-                android:textColor="@color/White"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@color/White"
+                app:itemIconSize="30dp"
+                app:itemIconTint="@color/menu_bottom_navigation"
+                app:labelVisibilityMode="unlabeled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/navigation_menu" />
+
+            <View
+                android:id="@+id/viewDivinder"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Divider"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                />
+
 
         </LinearLayout>
     </ScrollView>
