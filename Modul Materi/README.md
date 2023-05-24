@@ -19,3 +19,6 @@ Video Praktikum SQLite : https://youtu.be/oAXga_JuzfU
 
 pertemuan 7
 Video Praktikum SHAREDPREFERENCES : https://youtu.be/g3QZign54a4
+
+Pertemuan 8
+Video Praktikum Rest API : https://youtu.be/vbBkuz-vkC8
